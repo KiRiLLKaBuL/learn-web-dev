@@ -1,26 +1,251 @@
+
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Выбор даты и времени</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!--
-      ЗАДАНИЕ
-      ========
-      Сверстать страницу выбора даты и времени по своему макету.
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRUT — Выбор даты и времени</title>
 
-      Пока это только вёрстка. Никакого JavaScript — ни кликов,
-      ни переходов, ни выбора дня. Всё статично.
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-      Стили пишите в styles.css. Разметку — здесь.
-    -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-    <div class="page">
-      <!-- Начните отсюда. Разметьте шапку, основную область
-           с календарём и слотами, подвал. -->
+  <header class="header">
+    <div class="header-container">
+
+      <a href="#" class="logo">
+        <span class="logo-name">BRUT</span>
+        <span class="logo-description">БАРБЕРШОП<br>МОСКВА</span>
+      </a>
+
+      <nav class="navigation">
+        <a href="#">Услуги</a>
+        <a href="#">Мастера</a>
+        <a href="#">О нас</a>
+        <a href="#">Контакты</a>
+      </nav>
+
+      <div class="header-right">
+        <a href="tel:+74951234567" class="phone">
+          +7 (495) 123-45-67
+        </a>
+        <a href="#" class="header-booking">
+          Записаться <span>↗</span>
+        </a>
+      </div>
+
     </div>
-  </body>
+  </header>
+
+  <main class="main">
+
+    <nav class="progress" aria-label="Этапы записи">
+      <div class="progress-step completed">
+        <span class="progress-number">✓</span>
+        <span>Мастер</span>
+        <span class="progress-line"></span>
+      </div>
+
+      <div class="progress-step completed">
+        <span class="progress-number">✓</span>
+        <span>Услуга</span>
+        <span class="progress-line"></span>
+      </div>
+
+      <div class="progress-step current">
+        <span class="progress-number">03</span>
+        <strong>Дата и время</strong>
+        <span class="progress-line"></span>
+      </div>
+
+      <div class="progress-step upcoming">
+        <span class="progress-number">04</span>
+        <span>Контакты</span>
+        <span class="progress-line"></span>
+      </div>
+
+      <div class="progress-step upcoming">
+        <span class="progress-number">05</span>
+        <span>Готово</span>
+      </div>
+    </nav>
+
+    <section class="intro">
+      <h1>Найди время для себя</h1>
+      <p>Выбери дату и удобный слот. Время московское.</p>
+    </section>
+
+    <div class="booking-layout">
+
+      <!-- КАЛЕНДАРЬ -->
+      <section class="calendar-card card">
+
+        <div class="card-heading">
+          <h2>Октябрь 2026</h2>
+
+          <div class="month-navigation">
+            <button type="button" aria-label="Предыдущий месяц">‹</button>
+            <button type="button" aria-label="Следующий месяц">›</button>
+          </div>
+        </div>
+
+        <div class="weekdays">
+          <span>Пн</span>
+          <span>Вт</span>
+          <span>Ср</span>
+          <span>Чт</span>
+          <span>Пт</span>
+          <span>Сб</span>
+          <span>Вс</span>
+        </div>
+
+        <div class="calendar-days">
+          <button class="day muted" type="button">28</button>
+          <button class="day muted" type="button">29</button>
+          <button class="day muted" type="button">30</button>
+          <button class="day muted" type="button">1</button>
+          <button class="day muted" type="button">2</button>
+          <button class="day muted" type="button">3</button>
+          <button class="day muted" type="button">4</button>
+
+          <button class="day muted" type="button">5</button>
+          <button class="day muted" type="button">6</button>
+          <button class="day muted" type="button">7</button>
+          <button class="day muted" type="button">8</button>
+          <button class="day muted" type="button">9</button>
+          <button class="day muted" type="button">10</button>
+          <button class="day muted" type="button">11</button>
+
+          <button class="day muted" type="button">12</button>
+          <button class="day muted" type="button">13</button>
+          <button class="day muted" type="button">14</button>
+          <button class="day muted" type="button">15</button>
+          <button class="day muted" type="button">16</button>
+          <button class="day muted" type="button">17</button>
+          <button class="day muted" type="button">18</button>
+
+          <button class="day muted" type="button">19</button>
+          <button class="day muted" type="button">20</button>
+          <button class="day" type="button">21</button>
+          <button class="day" type="button">22</button>
+          <button class="day" type="button">23</button>
+          <button class="day selected" type="button" aria-pressed="true">24</button>
+          <button class="day" type="button">25</button>
+
+          <button class="day" type="button">26</button>
+          <button class="day" type="button">27</button>
+          <button class="day" type="button">28</button>
+          <button class="day" type="button">29</button>
+          <button class="day" type="button">30</button>
+          <button class="day" type="button">31</button>
+          <button class="day muted" type="button">1</button>
+        </div>
+
+        <div class="calendar-legend">
+          <span class="legend-dot"></span>
+          <span>24 октября · суббота</span>
+        </div>
+
+      </section>
+
+      <!-- ВЫБОР ВРЕМЕНИ -->
+      <section class="time-card card">
+
+        <div class="time-heading">
+          <h2>Суббота, 24 октября</h2>
+          <p>Алексей Морозов · 60 минут</p>
+        </div>
+
+        <div class="time-slots">
+          <button class="time-slot busy" type="button" disabled>10:00</button>
+          <button class="time-slot" type="button">11:30</button>
+          <button class="time-slot" type="button">12:00</button>
+
+          <button class="time-slot" type="button">13:00</button>
+          <button class="time-slot selected-time-slot" type="button" aria-pressed="true">14:30</button>
+          <button class="time-slot" type="button">16:00</button>
+
+          <button class="time-slot" type="button">17:30</button>
+          <button class="time-slot" type="button">18:00</button>
+          <button class="time-slot" type="button">19:30</button>
+        </div>
+
+        <p class="selected-caption">
+          <span>✓</span>
+          Выбрано: 14:30–15:30
+        </p>
+
+        <p class="time-hint">
+          Не нашлось удобного времени?<br>
+          Посмотри расписание на другую дату.
+        </p>
+
+      </section>
+
+      <!-- ИНФОРМАЦИЯ О ЗАПИСИ -->
+      <aside class="summary-card card">
+
+        <h2>Твоя запись</h2>
+
+        <div class="master">
+          <img
+            class="master-photo"
+            src="/learn-web-dev/frontend-1-practice/1.png"
+            alt="Фотография мастера"
+          >
+
+          <div class="master-info">
+            <h3>Алексей Морозов</h3>
+            <p>Топ-барбер · ★ 4,9</p>
+          </div>
+        </div>
+
+        <div class="summary-section">
+          <p class="summary-label">УСЛУГА</p>
+          <h3>Мужская стрижка</h3>
+          <p>60 минут · мытьё и укладка</p>
+        </div>
+
+        <div class="summary-section date-section">
+          <p class="summary-label">ДАТА И ВРЕМЯ</p>
+          <h3>24 октября, суббота · 14:30</h3>
+        </div>
+
+        <div class="total">
+          <span>Итого</span>
+          <strong>1 800 ₽</strong>
+        </div>
+
+        <p class="payment-note">
+          Оплата в барбершопе после визита.<br>
+          Никакой предоплаты.
+        </p>
+
+      </aside>
+
+    </div>
+
+    <div class="form-navigation">
+      <a href="#" class="back-button">
+        <span>←</span> Назад
+      </a>
+
+      <a href="#" class="continue-button">
+        Продолжить <span>→</span>
+      </a>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>© BRUT, 2026 · Стиль начинается с тебя</p>
+    <p>Москва, ул. Покровка, 17 · Ежедневно 10:00–22:00</p>
+    <a href="#">Политика конфиденциальности</a>
+  </footer>
+
+</body>
 </html>
